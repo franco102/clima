@@ -60,7 +60,7 @@ export default function useWeather (){
             serWeather(initialWeather)
             setLoading(true)
             setNotFound(false)
-            const {data}= await axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${search.city},${search.country}&appid=${API_KEY_WEATHER}`)
+            const {data}= await axios.get(`https://api.openweathermap.org/geo/1.0/direct?q=${search.city},${search.country}&appid=${API_KEY_WEATHER}`)
             if(!data[0]){
                 setNotFound(true)
                 return 
